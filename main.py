@@ -1,15 +1,9 @@
-from mail_details import get_info, print_info,print_info_with_color
-
-
-def start_mail():
-    mail_info = get_info()
-    user_choice = input("Do you want to print the mail message (Y/N)")
-    if user_choice in ['y', 'Y', 'yes', 'Yes']:
-        print_info_with_color(mail_info)
+from mail_details import Mail
 
 
 def main():
-    start_mail()
+    mail = Mail()
+    mail.run()
 
 
 if __name__ == '__main__':
