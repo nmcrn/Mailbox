@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from mail_details import get_info, print_info,print_info_with_color
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def start_mail():
+    mail_info = get_info()
+    user_choice = input("Do you want to print the mail message (Y/N)")
+    if user_choice in ['y', 'Y', 'yes', 'Yes']:
+        print_info_with_color(mail_info)
 
 
-# Press the green button in the gutter to run the script.
+def main():
+    start_mail()
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
